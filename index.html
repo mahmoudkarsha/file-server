@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>File Server App</title>
+  </head>
+  <body>
+    <main>
+      <nav id="nav">
+        <div class="nav-humberger-container" onclick="handleListIconClick()">
+          <img src="imgs/svgs/list.svg" class="nav-link-icon" />
+        </div>
+        <div class="nav-logo-container"></div>
+        <div class="nav-links-container">
+          <div class="nav-link-seperator">
+            <p class="nav-link-seperator-text">الرئيسية</p>
+          </div>
+          <div class="nav-link-container selected" link="">
+            <img src="imgs/svgs/home.svg" class="nav-link-icon" />
+            <p class="nav-link-text">الصفحة الرئيسية</p>
+          </div>
+          <div class="nav-link-seperator">
+            <p class="nav-link-seperator-text">ادارةالملفات</p>
+          </div>
+          <div class="nav-link-container" link="myfiles">
+            <img src="imgs/svgs/files.svg" class="nav-link-icon" />
+            <p class="nav-link-text">ملفاتي</p>
+          </div>
+          <div class="nav-link-container" link="bookmarks">
+            <img src="imgs/svgs/bookmarks.svg" class="nav-link-icon" />
+            <p class="nav-link-text">المفضلة</p>
+          </div>
+          <div class="nav-link-container" link="aboutus">
+            <img src="imgs/svgs/about.svg" class="nav-link-icon" />
+            <p class="nav-link-text">حولنا</p>
+          </div>
+          <div class="nav-link-seperator">
+            <p class="nav-link-seperator-text">ادارة الوصول</p>
+          </div>
+          <div class="nav-link-container" link="logout">
+            <img src="imgs/svgs/logout.svg" class="nav-link-icon" />
+            <p class="nav-link-text">تسجيل الخروج</p>
+          </div>
+        </div>
+      </nav>
+      <section class="main-section-cont"></section>
+    </main>
+    <script src="./js/tools.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/pages/homepage.js"></script>
+    <script src="./js/pages/myfiles.js"></script>
+    <script src="./js/pages/bookmarks.js"></script>
+    <script src="./js/pages/upload.js"></script>
+    <script src="./js/pages/aboutus.js"></script>
+    <script src="./js/pages/logout.js"></script>
+    <script src="./js/pages/notfound.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
