@@ -83,3 +83,39 @@ function downloadFile(e, url) {
 }
 
 function uploadFile() {}
+
+function page1(){
+  let state = {pagename : "page 1"}
+  return {
+      render(){
+          this.runBeforeFirstRender()
+          this.renderDom()
+          this.runAfterFirstRender()
+      },
+      renderDom(){
+          this.runBeforeEveryRender()
+          root.innerHTML = this.renderHtml()
+          this.runAfterEveryRender()
+      },
+      renderHtml(){
+          return(`<h1>Page 1 is Here ${state.pagename} </h1>`)
+      },
+      runBeforeEveryRender(){},
+      runAfterEveryRender(){},
+      runBeforeFirstRender(){},
+      runAfterFirstRender() {
+          div.addEventListener("click",this.callBAck)
+      },
+      cleanUp(){
+          div.removeEventListener("click",this.callBAck)
+      },
+      setState(object){
+          state = object
+          this.renderDom()
+      },
+      callBAck(){
+          console.log("div c p 1")
+      }
+
+  }
+}
